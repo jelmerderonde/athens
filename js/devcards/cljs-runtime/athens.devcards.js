@@ -2,18 +2,19 @@ goog.provide('athens.devcards');
 goog.require('cljs.core');
 goog.require('athens.devcards.db');
 goog.require('athens.devcards.sci_boxes');
+goog.require('athens.devcards.db_boxes');
 goog.require('cljsjs.react');
 goog.require('cljsjs.react.dom');
 goog.require('devcards.core');
 goog.require('reagent.core');
 athens.devcards.bmi_data = reagent.core.atom.cljs$core$IFn$_invoke$arity$1(new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"height","height",1025178622),(180),new cljs.core.Keyword(null,"weight","weight",-1262796205),(80)], null));
 athens.devcards.calc_bmi = (function athens$devcards$calc_bmi(bmi_data){
-var map__65382 = bmi_data;
-var map__65382__$1 = (((((!((map__65382 == null))))?(((((map__65382.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__65382.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__65382):map__65382);
-var data = map__65382__$1;
-var height = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__65382__$1,new cljs.core.Keyword(null,"height","height",1025178622));
-var weight = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__65382__$1,new cljs.core.Keyword(null,"weight","weight",-1262796205));
-var bmi = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__65382__$1,new cljs.core.Keyword(null,"bmi","bmi",1421979636));
+var map__49012 = bmi_data;
+var map__49012__$1 = (((((!((map__49012 == null))))?(((((map__49012.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__49012.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__49012):map__49012);
+var data = map__49012__$1;
+var height = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__49012__$1,new cljs.core.Keyword(null,"height","height",1025178622));
+var weight = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__49012__$1,new cljs.core.Keyword(null,"weight","weight",-1262796205));
+var bmi = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__49012__$1,new cljs.core.Keyword(null,"bmi","bmi",1421979636));
 var h = (height / (100));
 if((bmi == null)){
 return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(data,new cljs.core.Keyword(null,"bmi","bmi",1421979636),(weight / (h * h)));
@@ -33,20 +34,20 @@ return null;
 })], null)], null);
 });
 athens.devcards.bmi_component = (function athens$devcards$bmi_component(bmi_data){
-var map__65384 = athens.devcards.calc_bmi(cljs.core.deref(bmi_data));
-var map__65384__$1 = (((((!((map__65384 == null))))?(((((map__65384.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__65384.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__65384):map__65384);
-var weight = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__65384__$1,new cljs.core.Keyword(null,"weight","weight",-1262796205));
-var height = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__65384__$1,new cljs.core.Keyword(null,"height","height",1025178622));
-var bmi = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__65384__$1,new cljs.core.Keyword(null,"bmi","bmi",1421979636));
-var vec__65385 = (((bmi < 18.5))?new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["orange","underweight"], null):(((bmi < (25)))?new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["inherit","normal"], null):(((bmi < (30)))?new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["orange","overweight"], null):new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["red","obese"], null)
+var map__49016 = athens.devcards.calc_bmi(cljs.core.deref(bmi_data));
+var map__49016__$1 = (((((!((map__49016 == null))))?(((((map__49016.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__49016.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__49016):map__49016);
+var weight = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__49016__$1,new cljs.core.Keyword(null,"weight","weight",-1262796205));
+var height = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__49016__$1,new cljs.core.Keyword(null,"height","height",1025178622));
+var bmi = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__49016__$1,new cljs.core.Keyword(null,"bmi","bmi",1421979636));
+var vec__49017 = (((bmi < 18.5))?new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["orange","underweight"], null):(((bmi < (25)))?new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["inherit","normal"], null):(((bmi < (30)))?new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["orange","overweight"], null):new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["red","obese"], null)
 )));
-var color = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__65385,(0),null);
-var diagnose = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__65385,(1),null);
+var color = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__49017,(0),null);
+var diagnose = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__49017,(1),null);
 return new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"h3","h3",2067611163),"BM calculator"], null),new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),"Height: ",(height | (0)),"cm",new cljs.core.PersistentVector(null, 6, 5, cljs.core.PersistentVector.EMPTY_NODE, [athens.devcards.slider,bmi_data,new cljs.core.Keyword(null,"height","height",1025178622),height,(100),(220)], null)], null),new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),"Weight: ",(weight | (0)),"kg",new cljs.core.PersistentVector(null, 6, 5, cljs.core.PersistentVector.EMPTY_NODE, [athens.devcards.slider,bmi_data,new cljs.core.Keyword(null,"weight","weight",-1262796205),weight,(30),(150)], null)], null),new cljs.core.PersistentVector(null, 6, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),"BMI: ",(bmi | (0))," ",new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span","span",1394872991),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"color","color",1011675173),color], null)], null),diagnose], null),new cljs.core.PersistentVector(null, 6, 5, cljs.core.PersistentVector.EMPTY_NODE, [athens.devcards.slider,bmi_data,new cljs.core.Keyword(null,"bmi","bmi",1421979636),bmi,(10),(50)], null)], null)], null);
 });
 devcards.core.register_card(new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"path","path",-188191168),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"athens.devcards","athens.devcards",-31153168),new cljs.core.Keyword(null,"bmi-calculator","bmi-calculator",1180119377)], null),new cljs.core.Keyword(null,"func","func",-238706040),(function (){
 return devcards.core.card_base(new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"name","name",1843675177),"bmi-calculator",new cljs.core.Keyword(null,"documentation","documentation",1889593999),"*Code taken from the Reagent readme.*",new cljs.core.Keyword(null,"main-obj","main-obj",-1544409742),(function (){
-if((typeof athens !== 'undefined') && (typeof athens.devcards !== 'undefined') && (typeof athens.devcards.t_athens$devcards65392 !== 'undefined')){
+if((typeof athens !== 'undefined') && (typeof athens.devcards !== 'undefined') && (typeof athens.devcards.t_athens$devcards49021 !== 'undefined')){
 } else {
 
 /**
@@ -55,61 +56,61 @@ if((typeof athens !== 'undefined') && (typeof athens.devcards !== 'undefined') &
  * @implements {cljs.core.IWithMeta}
  * @implements {devcards.core.IDevcardOptions}
 */
-athens.devcards.t_athens$devcards65392 = (function (meta65393){
-this.meta65393 = meta65393;
+athens.devcards.t_athens$devcards49021 = (function (meta49022){
+this.meta49022 = meta49022;
 this.cljs$lang$protocol_mask$partition0$ = 393216;
 this.cljs$lang$protocol_mask$partition1$ = 0;
 });
-(athens.devcards.t_athens$devcards65392.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = (function (_65394,meta65393__$1){
+(athens.devcards.t_athens$devcards49021.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = (function (_49023,meta49022__$1){
 var self__ = this;
-var _65394__$1 = this;
-return (new athens.devcards.t_athens$devcards65392(meta65393__$1));
+var _49023__$1 = this;
+return (new athens.devcards.t_athens$devcards49021(meta49022__$1));
 }));
 
-(athens.devcards.t_athens$devcards65392.prototype.cljs$core$IMeta$_meta$arity$1 = (function (_65394){
+(athens.devcards.t_athens$devcards49021.prototype.cljs$core$IMeta$_meta$arity$1 = (function (_49023){
 var self__ = this;
-var _65394__$1 = this;
-return self__.meta65393;
+var _49023__$1 = this;
+return self__.meta49022;
 }));
 
-(athens.devcards.t_athens$devcards65392.prototype.devcards$core$IDevcardOptions$ = cljs.core.PROTOCOL_SENTINEL);
+(athens.devcards.t_athens$devcards49021.prototype.devcards$core$IDevcardOptions$ = cljs.core.PROTOCOL_SENTINEL);
 
-(athens.devcards.t_athens$devcards65392.prototype.devcards$core$IDevcardOptions$_devcard_options$arity$2 = (function (this__62895__auto__,devcard_opts__62896__auto__){
+(athens.devcards.t_athens$devcards49021.prototype.devcards$core$IDevcardOptions$_devcard_options$arity$2 = (function (this__46709__auto__,devcard_opts__46710__auto__){
 var self__ = this;
-var this__62895__auto____$1 = this;
-return cljs.core.assoc.cljs$core$IFn$_invoke$arity$variadic(devcard_opts__62896__auto__,new cljs.core.Keyword(null,"main-obj","main-obj",-1544409742),(function (){var v__62928__auto__ = athens.devcards.bmi_component;
-if(cljs.core.fn_QMARK_(v__62928__auto__)){
-return (function (data_atom__62929__auto__,owner__62930__auto__){
-return reagent.core.as_element(new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [v__62928__auto__,data_atom__62929__auto__,owner__62930__auto__], null));
+var this__46709__auto____$1 = this;
+return cljs.core.assoc.cljs$core$IFn$_invoke$arity$variadic(devcard_opts__46710__auto__,new cljs.core.Keyword(null,"main-obj","main-obj",-1544409742),(function (){var v__46728__auto__ = athens.devcards.bmi_component;
+if(cljs.core.fn_QMARK_(v__46728__auto__)){
+return (function (data_atom__46729__auto__,owner__46730__auto__){
+return reagent.core.as_element(new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [v__46728__auto__,data_atom__46729__auto__,owner__46730__auto__], null));
 });
 } else {
-return reagent.core.as_element(v__62928__auto__);
+return reagent.core.as_element(v__46728__auto__);
 }
-})(),cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"options","options",99638489),cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([cljs.core.PersistentArrayMap.EMPTY,devcards.core.assert_options_map(new cljs.core.Keyword(null,"options","options",99638489).cljs$core$IFn$_invoke$arity$1(devcard_opts__62896__auto__))], 0))], 0));
+})(),cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"options","options",99638489),cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([cljs.core.PersistentArrayMap.EMPTY,devcards.core.assert_options_map(new cljs.core.Keyword(null,"options","options",99638489).cljs$core$IFn$_invoke$arity$1(devcard_opts__46710__auto__))], 0))], 0));
 }));
 
-(athens.devcards.t_athens$devcards65392.getBasis = (function (){
-return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"meta65393","meta65393",-194716592,null)], null);
+(athens.devcards.t_athens$devcards49021.getBasis = (function (){
+return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"meta49022","meta49022",1912680557,null)], null);
 }));
 
-(athens.devcards.t_athens$devcards65392.cljs$lang$type = true);
+(athens.devcards.t_athens$devcards49021.cljs$lang$type = true);
 
-(athens.devcards.t_athens$devcards65392.cljs$lang$ctorStr = "athens.devcards/t_athens$devcards65392");
+(athens.devcards.t_athens$devcards49021.cljs$lang$ctorStr = "athens.devcards/t_athens$devcards49021");
 
-(athens.devcards.t_athens$devcards65392.cljs$lang$ctorPrWriter = (function (this__4428__auto__,writer__4429__auto__,opt__4430__auto__){
-return cljs.core._write(writer__4429__auto__,"athens.devcards/t_athens$devcards65392");
+(athens.devcards.t_athens$devcards49021.cljs$lang$ctorPrWriter = (function (this__4428__auto__,writer__4429__auto__,opt__4430__auto__){
+return cljs.core._write(writer__4429__auto__,"athens.devcards/t_athens$devcards49021");
 }));
 
 /**
- * Positional factory function for athens.devcards/t_athens$devcards65392.
+ * Positional factory function for athens.devcards/t_athens$devcards49021.
  */
-athens.devcards.__GT_t_athens$devcards65392 = (function athens$devcards$__GT_t_athens$devcards65392(meta65393){
-return (new athens.devcards.t_athens$devcards65392(meta65393));
+athens.devcards.__GT_t_athens$devcards49021 = (function athens$devcards$__GT_t_athens$devcards49021(meta49022){
+return (new athens.devcards.t_athens$devcards49021(meta49022));
 });
 
 }
 
-return (new athens.devcards.t_athens$devcards65392(null));
+return (new athens.devcards.t_athens$devcards49021(null));
 })()
 ,new cljs.core.Keyword(null,"initial-data","initial-data",-1315709804),athens.devcards.bmi_data,new cljs.core.Keyword(null,"options","options",99638489),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"inspect-data","inspect-data",640452006),true,new cljs.core.Keyword(null,"frame","frame",-1711082588),true,new cljs.core.Keyword(null,"history","history",-247395220),true], null)], null));
 })], null));
