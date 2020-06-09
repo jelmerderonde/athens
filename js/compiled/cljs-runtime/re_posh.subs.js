@@ -11,39 +11,39 @@ re_posh.subs.execute_sub = (function (){var method_table__4672__auto__ = cljs.co
 var prefer_table__4673__auto__ = cljs.core.atom.cljs$core$IFn$_invoke$arity$1(cljs.core.PersistentArrayMap.EMPTY);
 var method_cache__4674__auto__ = cljs.core.atom.cljs$core$IFn$_invoke$arity$1(cljs.core.PersistentArrayMap.EMPTY);
 var cached_hierarchy__4675__auto__ = cljs.core.atom.cljs$core$IFn$_invoke$arity$1(cljs.core.PersistentArrayMap.EMPTY);
-var hierarchy__4676__auto__ = cljs.core.get.cljs$core$IFn$_invoke$arity$3(cljs.core.PersistentArrayMap.EMPTY,new cljs.core.Keyword(null,"hierarchy","hierarchy",-1053470341),(function (){var fexpr__67709 = cljs.core.get_global_hierarchy;
-return (fexpr__67709.cljs$core$IFn$_invoke$arity$0 ? fexpr__67709.cljs$core$IFn$_invoke$arity$0() : fexpr__67709.call(null));
+var hierarchy__4676__auto__ = cljs.core.get.cljs$core$IFn$_invoke$arity$3(cljs.core.PersistentArrayMap.EMPTY,new cljs.core.Keyword(null,"hierarchy","hierarchy",-1053470341),(function (){var fexpr__67695 = cljs.core.get_global_hierarchy;
+return (fexpr__67695.cljs$core$IFn$_invoke$arity$0 ? fexpr__67695.cljs$core$IFn$_invoke$arity$0() : fexpr__67695.call(null));
 })());
 return (new cljs.core.MultiFn(cljs.core.symbol.cljs$core$IFn$_invoke$arity$2("re-posh.subs","execute-sub"),new cljs.core.Keyword(null,"type","type",1174270348),new cljs.core.Keyword(null,"default","default",-1987822328),hierarchy__4676__auto__,method_table__4672__auto__,prefer_table__4673__auto__,method_cache__4674__auto__,cached_hierarchy__4675__auto__));
 })();
 }
-re_posh.subs.execute_sub.cljs$core$IMultiFn$_add_method$arity$3(null,new cljs.core.Keyword(null,"query","query",-1288509510),(function (p__67710){
-var map__67711 = p__67710;
-var map__67711__$1 = (((((!((map__67711 == null))))?(((((map__67711.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__67711.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__67711):map__67711);
-var query = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__67711__$1,new cljs.core.Keyword(null,"query","query",-1288509510));
-var variables = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__67711__$1,new cljs.core.Keyword(null,"variables","variables",1563680814));
+re_posh.subs.execute_sub.cljs$core$IMultiFn$_add_method$arity$3(null,new cljs.core.Keyword(null,"query","query",-1288509510),(function (p__67696){
+var map__67697 = p__67696;
+var map__67697__$1 = (((((!((map__67697 == null))))?(((((map__67697.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__67697.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__67697):map__67697);
+var query = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__67697__$1,new cljs.core.Keyword(null,"query","query",-1288509510));
+var variables = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__67697__$1,new cljs.core.Keyword(null,"variables","variables",1563680814));
 var pre_q = cljs.core.partial.cljs$core$IFn$_invoke$arity$3(posh.reagent.q,query,cljs.core.deref(re_posh.db.store));
 return cljs.core.apply.cljs$core$IFn$_invoke$arity$2(pre_q,cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentVector.EMPTY,variables));
 }));
-re_posh.subs.execute_sub.cljs$core$IMultiFn$_add_method$arity$3(null,new cljs.core.Keyword(null,"pull","pull",-860544805),(function (p__67713){
-var map__67714 = p__67713;
-var map__67714__$1 = (((((!((map__67714 == null))))?(((((map__67714.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__67714.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__67714):map__67714);
-var pattern = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__67714__$1,new cljs.core.Keyword(null,"pattern","pattern",242135423));
-var id = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__67714__$1,new cljs.core.Keyword(null,"id","id",-1388402092));
-var G__67716 = cljs.core.deref(re_posh.db.store);
-var G__67717 = pattern;
-var G__67718 = id;
-return (posh.reagent.pull.cljs$core$IFn$_invoke$arity$3 ? posh.reagent.pull.cljs$core$IFn$_invoke$arity$3(G__67716,G__67717,G__67718) : posh.reagent.pull.call(null,G__67716,G__67717,G__67718));
+re_posh.subs.execute_sub.cljs$core$IMultiFn$_add_method$arity$3(null,new cljs.core.Keyword(null,"pull","pull",-860544805),(function (p__67699){
+var map__67700 = p__67699;
+var map__67700__$1 = (((((!((map__67700 == null))))?(((((map__67700.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__67700.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__67700):map__67700);
+var pattern = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__67700__$1,new cljs.core.Keyword(null,"pattern","pattern",242135423));
+var id = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__67700__$1,new cljs.core.Keyword(null,"id","id",-1388402092));
+var G__67702 = cljs.core.deref(re_posh.db.store);
+var G__67703 = pattern;
+var G__67704 = id;
+return (posh.reagent.pull.cljs$core$IFn$_invoke$arity$3 ? posh.reagent.pull.cljs$core$IFn$_invoke$arity$3(G__67702,G__67703,G__67704) : posh.reagent.pull.call(null,G__67702,G__67703,G__67704));
 }));
-re_posh.subs.execute_sub.cljs$core$IMultiFn$_add_method$arity$3(null,new cljs.core.Keyword(null,"pull-many","pull-many",217148130),(function (p__67719){
-var map__67720 = p__67719;
-var map__67720__$1 = (((((!((map__67720 == null))))?(((((map__67720.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__67720.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__67720):map__67720);
-var pattern = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__67720__$1,new cljs.core.Keyword(null,"pattern","pattern",242135423));
-var ids = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__67720__$1,new cljs.core.Keyword(null,"ids","ids",-998535796));
-var G__67722 = cljs.core.deref(re_posh.db.store);
-var G__67723 = pattern;
-var G__67724 = ids;
-return (posh.reagent.pull_many.cljs$core$IFn$_invoke$arity$3 ? posh.reagent.pull_many.cljs$core$IFn$_invoke$arity$3(G__67722,G__67723,G__67724) : posh.reagent.pull_many.call(null,G__67722,G__67723,G__67724));
+re_posh.subs.execute_sub.cljs$core$IMultiFn$_add_method$arity$3(null,new cljs.core.Keyword(null,"pull-many","pull-many",217148130),(function (p__67705){
+var map__67706 = p__67705;
+var map__67706__$1 = (((((!((map__67706 == null))))?(((((map__67706.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__67706.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__67706):map__67706);
+var pattern = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__67706__$1,new cljs.core.Keyword(null,"pattern","pattern",242135423));
+var ids = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__67706__$1,new cljs.core.Keyword(null,"ids","ids",-998535796));
+var G__67708 = cljs.core.deref(re_posh.db.store);
+var G__67709 = pattern;
+var G__67710 = ids;
+return (posh.reagent.pull_many.cljs$core$IFn$_invoke$arity$3 ? posh.reagent.pull_many.cljs$core$IFn$_invoke$arity$3(G__67708,G__67709,G__67710) : posh.reagent.pull_many.call(null,G__67708,G__67709,G__67710));
 }));
 /**
  * For a given `query-id` register a `config` function and input `signals`
@@ -123,14 +123,14 @@ return (posh.reagent.pull_many.cljs$core$IFn$_invoke$arity$3 ? posh.reagent.pull
  */
 re_posh.subs.reg_sub = (function re_posh$subs$reg_sub(var_args){
 var args__4795__auto__ = [];
-var len__4789__auto___67751 = arguments.length;
-var i__4790__auto___67752 = (0);
+var len__4789__auto___67739 = arguments.length;
+var i__4790__auto___67740 = (0);
 while(true){
-if((i__4790__auto___67752 < len__4789__auto___67751)){
-args__4795__auto__.push((arguments[i__4790__auto___67752]));
+if((i__4790__auto___67740 < len__4789__auto___67739)){
+args__4795__auto__.push((arguments[i__4790__auto___67740]));
 
-var G__67753 = (i__4790__auto___67752 + (1));
-i__4790__auto___67752 = G__67753;
+var G__67741 = (i__4790__auto___67740 + (1));
+i__4790__auto___67740 = G__67741;
 continue;
 } else {
 }
@@ -145,29 +145,29 @@ return re_posh.subs.reg_sub.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]
 var config_fn = cljs.core.last(args);
 var input_args = cljs.core.butlast(args);
 var err_header = ["re-posh: reg-sub for ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(query_id),", "].join('');
-var inputs_fn = (function (){var G__67731 = cljs.core.count(input_args);
-switch (G__67731) {
+var inputs_fn = (function (){var G__67713 = cljs.core.count(input_args);
+switch (G__67713) {
 case (0):
 return (function() {
-var G__67755 = null;
-var G__67755__1 = (function (_){
+var G__67743 = null;
+var G__67743__1 = (function (_){
 return null;
 });
-var G__67755__2 = (function (_,___$1){
+var G__67743__2 = (function (_,___$1){
 return null;
 });
-G__67755 = function(_,___$1){
+G__67743 = function(_,___$1){
 switch(arguments.length){
 case 1:
-return G__67755__1.call(this,_);
+return G__67743__1.call(this,_);
 case 2:
-return G__67755__2.call(this,_,___$1);
+return G__67743__2.call(this,_,___$1);
 }
 throw(new Error('Invalid arity: ' + arguments.length));
 };
-G__67755.cljs$core$IFn$_invoke$arity$1 = G__67755__1;
-G__67755.cljs$core$IFn$_invoke$arity$2 = G__67755__2;
-return G__67755;
+G__67743.cljs$core$IFn$_invoke$arity$1 = G__67743__1;
+G__67743.cljs$core$IFn$_invoke$arity$2 = G__67743__2;
+return G__67743;
 })()
 
 break;
@@ -182,9 +182,9 @@ return f;
 
 break;
 case (2):
-var vec__67732 = input_args;
-var marker = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__67732,(0),null);
-var vec = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__67732,(1),null);
+var vec__67714 = input_args;
+var marker = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__67714,(0),null);
+var vec = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__67714,(1),null);
 if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"<-","<-",760412998),marker)){
 } else {
 re_frame.loggers.console.cljs$core$IFn$_invoke$arity$variadic(new cljs.core.Keyword(null,"error","error",-978969032),cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([err_header,"expected :<-, got: ",marker], 0));
@@ -248,17 +248,17 @@ return re_posh$subs$inp_fn;
 })();
 return re_frame.core.reg_sub_raw(query_id,(function (_,params){
 if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(cljs.core.count(input_args),(0))){
-var G__67735 = (function (){var G__67736 = cljs.core.deref(cljs.core.deref(re_posh.db.store));
-var G__67737 = params;
-return (config_fn.cljs$core$IFn$_invoke$arity$2 ? config_fn.cljs$core$IFn$_invoke$arity$2(G__67736,G__67737) : config_fn.call(null,G__67736,G__67737));
+var G__67717 = (function (){var G__67718 = cljs.core.deref(cljs.core.deref(re_posh.db.store));
+var G__67719 = params;
+return (config_fn.cljs$core$IFn$_invoke$arity$2 ? config_fn.cljs$core$IFn$_invoke$arity$2(G__67718,G__67719) : config_fn.call(null,G__67718,G__67719));
 })();
-return (re_posh.subs.execute_sub.cljs$core$IFn$_invoke$arity$1 ? re_posh.subs.execute_sub.cljs$core$IFn$_invoke$arity$1(G__67735) : re_posh.subs.execute_sub.call(null,G__67735));
+return (re_posh.subs.execute_sub.cljs$core$IFn$_invoke$arity$1 ? re_posh.subs.execute_sub.cljs$core$IFn$_invoke$arity$1(G__67717) : re_posh.subs.execute_sub.call(null,G__67717));
 } else {
 return reagent.ratom.make_reaction((function (){
 var inputs = (inputs_fn.cljs$core$IFn$_invoke$arity$1 ? inputs_fn.cljs$core$IFn$_invoke$arity$1(params) : inputs_fn.call(null,params));
 var signals = ((cljs.core.list_QMARK_(inputs))?cljs.core.map.cljs$core$IFn$_invoke$arity$2(cljs.core.deref,inputs):cljs.core.deref(inputs));
-return cljs.core.deref((function (){var G__67738 = (config_fn.cljs$core$IFn$_invoke$arity$2 ? config_fn.cljs$core$IFn$_invoke$arity$2(signals,params) : config_fn.call(null,signals,params));
-return (re_posh.subs.execute_sub.cljs$core$IFn$_invoke$arity$1 ? re_posh.subs.execute_sub.cljs$core$IFn$_invoke$arity$1(G__67738) : re_posh.subs.execute_sub.call(null,G__67738));
+return cljs.core.deref((function (){var G__67720 = (config_fn.cljs$core$IFn$_invoke$arity$2 ? config_fn.cljs$core$IFn$_invoke$arity$2(signals,params) : config_fn.call(null,signals,params));
+return (re_posh.subs.execute_sub.cljs$core$IFn$_invoke$arity$1 ? re_posh.subs.execute_sub.cljs$core$IFn$_invoke$arity$1(G__67720) : re_posh.subs.execute_sub.call(null,G__67720));
 })());
 }));
 }
@@ -268,11 +268,11 @@ return (re_posh.subs.execute_sub.cljs$core$IFn$_invoke$arity$1 ? re_posh.subs.ex
 (re_posh.subs.reg_sub.cljs$lang$maxFixedArity = (1));
 
 /** @this {Function} */
-(re_posh.subs.reg_sub.cljs$lang$applyTo = (function (seq67727){
-var G__67728 = cljs.core.first(seq67727);
-var seq67727__$1 = cljs.core.next(seq67727);
+(re_posh.subs.reg_sub.cljs$lang$applyTo = (function (seq67711){
+var G__67712 = cljs.core.first(seq67711);
+var seq67711__$1 = cljs.core.next(seq67711);
 var self__4776__auto__ = this;
-return self__4776__auto__.cljs$core$IFn$_invoke$arity$variadic(G__67728,seq67727__$1);
+return self__4776__auto__.cljs$core$IFn$_invoke$arity$variadic(G__67712,seq67711__$1);
 }));
 
 /**
@@ -293,13 +293,13 @@ return self__4776__auto__.cljs$core$IFn$_invoke$arity$variadic(G__67728,seq67727
  *   
  */
 re_posh.subs.reg_query_sub = (function re_posh$subs$reg_query_sub(sub_name,query){
-return re_posh.subs.reg_sub.cljs$core$IFn$_invoke$arity$variadic(sub_name,cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([(function (_,p__67739){
-var vec__67740 = p__67739;
-var seq__67741 = cljs.core.seq(vec__67740);
-var first__67742 = cljs.core.first(seq__67741);
-var seq__67741__$1 = cljs.core.next(seq__67741);
-var ___$1 = first__67742;
-var params = seq__67741__$1;
+return re_posh.subs.reg_sub.cljs$core$IFn$_invoke$arity$variadic(sub_name,cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([(function (_,p__67721){
+var vec__67722 = p__67721;
+var seq__67723 = cljs.core.seq(vec__67722);
+var first__67724 = cljs.core.first(seq__67723);
+var seq__67723__$1 = cljs.core.next(seq__67723);
+var ___$1 = first__67724;
+var params = seq__67723__$1;
 return new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"type","type",1174270348),new cljs.core.Keyword(null,"query","query",-1288509510),new cljs.core.Keyword(null,"query","query",-1288509510),query,new cljs.core.Keyword(null,"variables","variables",1563680814),params], null);
 })], 0));
 });
@@ -318,10 +318,10 @@ return new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"ty
  *   Where id is an entity id
  */
 re_posh.subs.reg_pull_sub = (function re_posh$subs$reg_pull_sub(sub_name,pattern){
-return re_posh.subs.reg_sub.cljs$core$IFn$_invoke$arity$variadic(sub_name,cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([(function (_,p__67743){
-var vec__67744 = p__67743;
-var ___$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__67744,(0),null);
-var id = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__67744,(1),null);
+return re_posh.subs.reg_sub.cljs$core$IFn$_invoke$arity$variadic(sub_name,cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([(function (_,p__67725){
+var vec__67726 = p__67725;
+var ___$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__67726,(0),null);
+var id = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__67726,(1),null);
 return new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"type","type",1174270348),new cljs.core.Keyword(null,"pull","pull",-860544805),new cljs.core.Keyword(null,"pattern","pattern",242135423),pattern,new cljs.core.Keyword(null,"id","id",-1388402092),id], null);
 })], 0));
 });
@@ -340,10 +340,10 @@ return new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"ty
  *   Where ids is a sequence of entity ids
  */
 re_posh.subs.reg_pull_many_sub = (function re_posh$subs$reg_pull_many_sub(sub_name,pattern){
-return re_posh.subs.reg_sub.cljs$core$IFn$_invoke$arity$variadic(sub_name,cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([(function (_,p__67747){
-var vec__67748 = p__67747;
-var ___$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__67748,(0),null);
-var ids = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__67748,(1),null);
+return re_posh.subs.reg_sub.cljs$core$IFn$_invoke$arity$variadic(sub_name,cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([(function (_,p__67729){
+var vec__67730 = p__67729;
+var ___$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__67730,(0),null);
+var ids = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__67730,(1),null);
 return new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"type","type",1174270348),new cljs.core.Keyword(null,"pull-many","pull-many",217148130),new cljs.core.Keyword(null,"pattern","pattern",242135423),pattern,new cljs.core.Keyword(null,"ids","ids",-998535796),ids], null);
 })], 0));
 });

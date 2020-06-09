@@ -2,8 +2,8 @@ goog.provide('re_posh.events');
 goog.require('cljs.core');
 goog.require('re_frame.core');
 re_posh.events.reg_event_ds = (function re_posh$events$reg_event_ds(var_args){
-var G__66413 = arguments.length;
-switch (G__66413) {
+var G__67689 = arguments.length;
+switch (G__67689) {
 case 3:
 return re_posh.events.reg_event_ds.cljs$core$IFn$_invoke$arity$3((arguments[(0)]),(arguments[(1)]),(arguments[(2)]));
 
@@ -19,12 +19,12 @@ throw (new Error(["Invalid arity: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(
 });
 
 (re_posh.events.reg_event_ds.cljs$core$IFn$_invoke$arity$3 = (function (event_name,interceptors,handler){
-return re_frame.core.reg_event_fx.cljs$core$IFn$_invoke$arity$3(event_name,cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentVector.EMPTY,cljs.core.concat.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [(function (){var G__66418 = new cljs.core.Keyword(null,"ds","ds",-257415859);
-return (re_frame.core.inject_cofx.cljs$core$IFn$_invoke$arity$1 ? re_frame.core.inject_cofx.cljs$core$IFn$_invoke$arity$1(G__66418) : re_frame.core.inject_cofx.call(null,G__66418));
-})()], null),interceptors)),(function (p__66419,signal){
-var map__66420 = p__66419;
-var map__66420__$1 = (((((!((map__66420 == null))))?(((((map__66420.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__66420.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__66420):map__66420);
-var ds = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66420__$1,new cljs.core.Keyword(null,"ds","ds",-257415859));
+return re_frame.core.reg_event_fx.cljs$core$IFn$_invoke$arity$3(event_name,cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentVector.EMPTY,cljs.core.concat.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [(function (){var G__67690 = new cljs.core.Keyword(null,"ds","ds",-257415859);
+return (re_frame.core.inject_cofx.cljs$core$IFn$_invoke$arity$1 ? re_frame.core.inject_cofx.cljs$core$IFn$_invoke$arity$1(G__67690) : re_frame.core.inject_cofx.call(null,G__67690));
+})()], null),interceptors)),(function (p__67691,signal){
+var map__67692 = p__67691;
+var map__67692__$1 = (((((!((map__67692 == null))))?(((((map__67692.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__67692.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__67692):map__67692);
+var ds = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__67692__$1,new cljs.core.Keyword(null,"ds","ds",-257415859));
 return new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"transact","transact",-267998670),(handler.cljs$core$IFn$_invoke$arity$2 ? handler.cljs$core$IFn$_invoke$arity$2(ds,signal) : handler.call(null,ds,signal))], null);
 }));
 }));
